@@ -187,7 +187,7 @@ jobs:
       if: github.event_name == 'release' && matrix.config.has_release
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: v2ray-rust.7z
+        path: release-tmp
         asset_name: v2ray-rust-${{ steps.get_version.outputs.VERSION }}-${{ matrix.config.artifact }}.7z
         tag: ${{ github.ref }}
         overwrite: true
